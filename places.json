@@ -1,364 +1,1511 @@
-# backend/places.json (пример, можно скопировать из условия
 [
   {
-    "id": "museum_pampalche",
-    "name": "Музей марийской сказки и народного творчества Сереброзубая Пампалче",
+    "id": "patriarshaya_emb",
+    "name": "Патриаршая площадь",
+    "category": "walk",
+    "description": "Центральная прогулочная точка с узнаваемой архитектурой в стиле модерн",
+    "tags": [
+      "прогулка",
+      "фото",
+      "центр",
+      "архитектура",
+      "история"
+    ],
+    "indoor": false,
+    "duration_min": 40,
+    "budget": "low",
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "seniors",
+      "friends"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 5,
+    "local_score": 5,
+    "coords": [
+      56.634,
+      47.899
+    ],
+    "address": "г. Йошкар-Ола, наб. Брюгге",
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
+    "ministry_boost": 3,
+    "promo_label": null
+  },
+  {
+    "id": "museum_city",
+    "name": "Музей истории города",
     "category": "museum",
-    "description": "Уникальный музей в доме купца Наумова, где оживают марийские сказки: можно примерить костюмы, поиграть в народные игры, посетить мастер-классы по ремёслам [[11]]",
-    "tags": ["сказки", "фольклор", "indoor", "мастер-классы", "семья"],
+    "description": "Экспозиции об истории Йошкар-Олы от основания до наших дней",
+    "tags": [
+      "история",
+      "indoor",
+      "образование",
+      "музеи"
+    ],
+    "indoor": true,
+    "duration_min": 90,
+    "budget": "medium",
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "seniors"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 3,
+    "local_score": 5,
+    "coords": [
+      56.632,
+      47.895
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 2,
+    "promo_label": "Скидка 20% для семей",
+    "address": "г. Йошкар-Ола, ул. Советская, 1"
+  },
+  {
+    "id": "cafe_national",
+    "name": "Кафе национальной кухни",
+    "category": "cafe",
+    "description": "Уютное кафе с блюдами марийской кухни: субере, коман-мелна, пельмени",
+    "tags": [
+      "еда",
+      "indoor",
+      "местная кухня",
+      "национальная"
+    ],
+    "indoor": true,
+    "duration_min": 60,
+    "budget": "medium",
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends"
+    ],
+    "activity_level": "low",
+    "food_tags": [
+      "местная кухня",
+      "обед",
+      "ужин"
+    ],
+    "photo_score": 4,
+    "local_score": 5,
+    "coords": [
+      56.635,
+      47.9
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 1,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола, ул. Советская, 5"
+  },
+  {
+    "id": "art_gallery",
+    "name": "Художественная галерея",
+    "category": "museum",
+    "description": "Выставки современного и классического искусства, работы местных художников",
+    "tags": [
+      "искусство",
+      "indoor",
+      "фото",
+      "музеи",
+      "культура"
+    ],
+    "indoor": true,
+    "duration_min": 50,
+    "budget": "medium",
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 5,
+    "local_score": 4,
+    "coords": [
+      56.63,
+      47.892
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 2,
+    "promo_label": "Вход бесплатный для детей",
+    "address": "г. Йошкар-Ола, ул. Советская, 16"
+  },
+  {
+    "id": "coffee_house",
+    "name": "Кофейня на набережной",
+    "category": "cafe",
+    "description": "Кофе, десерты, вид на реку Малую Кокшагу",
+    "tags": [
+      "еда",
+      "кофе",
+      "indoor",
+      "десерты",
+      "набережная"
+    ],
+    "indoor": true,
+    "duration_min": 40,
+    "budget": "low",
+    "audiences": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "activity_level": "low",
+    "food_tags": [
+      "кофе",
+      "десерты",
+      "завтрак"
+    ],
+    "photo_score": 4,
+    "local_score": 5,
+    "coords": [
+      56.638,
+      47.905
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 1,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола, наб. реки Малой Кокшаги, 1"
+  },
+  {
+    "id": "museum_pampalche",
+    "name": "Музей марийской сказки Пампалче",
+    "category": "museum",
+    "description": "Уникальный музей в доме купца Наумова, где оживают марийские сказки: можно примерить костюмы, поиграть в народные игры",
+    "tags": [
+      "сказки",
+      "фольклор",
+      "indoor",
+      "мастер-классы",
+      "семья"
+    ],
     "indoor": true,
     "duration_min": 45,
     "budget": "medium",
-    "audiences": ["solo", "couple", "family", "friends"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends"
+    ],
     "activity_level": "low",
     "food_tags": [],
     "photo_score": 4,
     "local_score": 5,
-    "coords": [56.633, 47.897],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.633,
+      47.897
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 2,
-    "promo_label": "Мастер-классы от 200₽"
+    "promo_label": "Мастер-классы от 200₽",
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "museum_glasses",
     "name": "Музей очков",
     "category": "museum",
-    "description": "Один из пяти подобных музеев в мире: экспозиция об истории очков, экспонаты от 13 века, очки знаменитостей [[21]]",
-    "tags": ["история", "indoor", "уникальное", "образование"],
+    "description": "Один из пяти подобных музеев в мире: экспозиция об истории очков от 13 века",
+    "tags": [
+      "история",
+      "indoor",
+      "уникальное",
+      "образование"
+    ],
     "indoor": true,
     "duration_min": 50,
     "budget": "low",
-    "audiences": ["solo", "couple", "family", "seniors"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "seniors"
+    ],
     "activity_level": "low",
     "food_tags": [],
     "photo_score": 3,
     "local_score": 4,
-    "coords": [56.633, 47.898],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.633,
+      47.898
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 2,
-    "promo_label": null
-  },
-  {
-    "id": "museum_history_arch",
-    "name": "Музей истории и археологии Республики Марий Эл",
-    "category": "museum",
-    "description": "Экспозиции об археологических находках и истории Марийского края с древнейших времён [[50]]",
-    "tags": ["история", "археология", "indoor", "образование"],
-    "indoor": true,
-    "duration_min": 30,
-    "budget": "low",
-    "audiences": ["solo", "couple", "family", "seniors"],
-    "activity_level": "low",
-    "food_tags": [],
-    "photo_score": 3,
-    "local_score": 5,
-    "coords": [56.632, 47.895],
-    "weather_ok": ["sun", "cloud", "rain"],
-    "ministry_boost": 3,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "museum_yoshkin_cat",
     "name": "Музей Йошкина Кота",
     "category": "museum",
-    "description": "Гастрономический музей с экспозицией о марийских брендах и дегустацией местного сыра [[46]]",
-    "tags": ["гастрономия", "indoor", "местная кухня", "интерактив"],
+    "description": "Гастрономический музей с экспозицией о марийских брендах и дегустацией местного сыра",
+    "tags": [
+      "гастрономия",
+      "indoor",
+      "местная кухня",
+      "интерактив"
+    ],
     "indoor": true,
     "duration_min": 40,
     "budget": "medium",
-    "audiences": ["solo", "couple", "family", "friends"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends"
+    ],
     "activity_level": "low",
-    "food_tags": ["дегустация", "сыр", "местная кухня"],
+    "food_tags": [
+      "дегустация",
+      "сыр",
+      "местная кухня"
+    ],
     "photo_score": 5,
     "local_score": 5,
-    "coords": [56.635, 47.901],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.635,
+      47.901
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 3,
-    "promo_label": "Дегустация в подарок"
-  },
-  {
-    "id": "museum_puppet_theater",
-    "name": "Музей театра кукол",
-    "category": "museum",
-    "description": "Экспозиция о истории кукольного театра, куклы разных эпох и культур, интерактивные зоны",
-    "tags": ["театр", "куклы", "indoor", "семья", "искусство"],
-    "indoor": true,
-    "duration_min": 60,
-    "budget": "medium",
-    "audiences": ["family", "couple", "friends"],
-    "activity_level": "low",
-    "food_tags": [],
-    "photo_score": 4,
-    "local_score": 4,
-    "coords": [56.637, 47.907],
-    "weather_ok": ["sun", "cloud", "rain"],
-    "ministry_boost": 2,
-    "promo_label": "Скидка для групп"
+    "promo_label": "Дегустация в подарок",
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "tea_listva",
     "name": "Чайная \"Листва\"",
     "category": "cafe",
-    "description": "Уютное культурное пространство с чаем, книгами и атмосферой для спокойного отдыха [[60]]",
-    "tags": ["чай", "indoor", "книги", "тишина", "кофе"],
+    "description": "Уютное культурное пространство с чаем, книгами и атмосферой для спокойного отдыха",
+    "tags": [
+      "чай",
+      "indoor",
+      "книги",
+      "тишина",
+      "кофе"
+    ],
     "indoor": true,
     "duration_min": 60,
     "budget": "low",
-    "audiences": ["solo", "couple", "friends"],
+    "audiences": [
+      "solo",
+      "couple",
+      "friends"
+    ],
     "activity_level": "low",
-    "food_tags": ["чай", "десерты", "лёгкие закуски"],
+    "food_tags": [
+      "чай",
+      "десерты",
+      "лёгкие закуски"
+    ],
     "photo_score": 4,
     "local_score": 5,
-    "coords": [56.632, 47.896],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.632,
+      47.896
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 1,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "cafe_mari",
     "name": "Кафе \"Мари\"",
     "category": "cafe",
-    "description": "Ресторан марийской национальной кухни с традиционными блюдами и уютной атмосферой [[63]]",
-    "tags": ["еда", "indoor", "местная кухня", "национальная"],
+    "description": "Ресторан марийской национальной кухни с традиционными блюдами",
+    "tags": [
+      "еда",
+      "indoor",
+      "местная кухня",
+      "национальная"
+    ],
     "indoor": true,
     "duration_min": 60,
     "budget": "medium",
-    "audiences": ["solo", "couple", "family", "friends"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends"
+    ],
     "activity_level": "low",
-    "food_tags": ["марийская кухня", "обед", "ужин", "традиционная еда"],
+    "food_tags": [
+      "марийская кухня",
+      "обед",
+      "ужин"
+    ],
     "photo_score": 4,
     "local_score": 5,
-    "coords": [56.629, 47.893],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.629,
+      47.893
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 2,
-    "promo_label": "Бизнес-ланч"
+    "promo_label": "Бизнес-ланч",
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "restaurant_stary_georg",
     "name": "Ресторан \"Старый Георг\"",
-    "category": "cafe",
+    "category": "restaurant",
     "description": "Ресторан европейской кухни в центре города с классическим интерьером",
-    "tags": ["еда", "indoor", "европейская кухня", "ресторан"],
+    "tags": [
+      "еда",
+      "indoor",
+      "европейская кухня",
+      "ресторан"
+    ],
     "indoor": true,
-    "duration_min": 60,
+    "duration_min": 90,
     "budget": "high",
-    "audiences": ["couple", "family", "friends"],
+    "audiences": [
+      "couple",
+      "family",
+      "friends"
+    ],
     "activity_level": "low",
-    "food_tags": ["европейская", "ужин", "вина"],
+    "food_tags": [
+      "европейская",
+      "ужин",
+      "вина"
+    ],
     "photo_score": 4,
     "local_score": 4,
-    "coords": [56.631, 47.899],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.631,
+      47.899
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 1,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "restaurant_shavi",
     "name": "Ресторан \"Шави\"",
-    "category": "cafe",
+    "category": "restaurant",
     "description": "Грузинская кухня с традиционными блюдами, хачапури и хинкали",
-    "tags": ["еда", "indoor", "грузинская кухня", "кавказская"],
+    "tags": [
+      "еда",
+      "indoor",
+      "грузинская кухня",
+      "кавказская"
+    ],
     "indoor": true,
     "duration_min": 60,
     "budget": "medium",
-    "audiences": ["couple", "family", "friends"],
+    "audiences": [
+      "couple",
+      "family",
+      "friends"
+    ],
     "activity_level": "low",
-    "food_tags": ["грузинская", "хинкали", "хачапури", "вино"],
+    "food_tags": [
+      "грузинская",
+      "хинкали",
+      "хачапури",
+      "вино"
+    ],
     "photo_score": 4,
     "local_score": 4,
-    "coords": [56.625, 47.910],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.625,
+      47.91
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 1,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "cafe_simple_food",
     "name": "Кафе \"Простая еда\"",
     "category": "cafe",
     "description": "Недорогое кафе с домашней традиционной едой и быстрым обслуживанием",
-    "tags": ["еда", "indoor", "бюджетно", "традиционная еда"],
+    "tags": [
+      "еда",
+      "indoor",
+      "бюджетно",
+      "традиционная еда"
+    ],
     "indoor": true,
-    "duration_min": 60,
+    "duration_min": 45,
     "budget": "low",
-    "audiences": ["solo", "family", "friends"],
+    "audiences": [
+      "solo",
+      "family",
+      "friends"
+    ],
     "activity_level": "low",
-    "food_tags": ["традиционная еда", "обед", "бизнес-ланч"],
+    "food_tags": [
+      "традиционная еда",
+      "обед",
+      "бизнес-ланч"
+    ],
     "photo_score": 2,
     "local_score": 4,
-    "coords": [56.634, 47.902],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.634,
+      47.902
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 1,
-    "promo_label": "Комбо-обеды"
+    "promo_label": "Комбо-обеды",
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "embankment_brugge",
     "name": "Набережная Брюгге",
     "category": "walk",
-    "description": "Пешеходная набережная с архитектурой в стиле северной готики, напоминающая бельгийский Брюгге [[30]]",
-    "tags": ["прогулка", "фото", "архитектура", "набережная", "европа"],
+    "description": "Пешеходная набережная с архитектурой в стиле северной готики, напоминающая бельгийский Брюгге",
+    "tags": [
+      "прогулка",
+      "фото",
+      "архитектура",
+      "набережная",
+      "европа"
+    ],
     "indoor": false,
     "duration_min": 90,
     "budget": "low",
-    "audiences": ["solo", "couple", "family", "friends", "seniors"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends",
+      "seniors"
+    ],
     "activity_level": "medium",
     "food_tags": [],
     "photo_score": 5,
     "local_score": 5,
-    "coords": [56.638, 47.905],
-    "weather_ok": ["sun", "cloud"],
+    "coords": [
+      56.638,
+      47.905
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
     "ministry_boost": 5,
-    "promo_label": "Визитная карточка города"
+    "promo_label": "Визитная карточка города",
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "clocks_12_apostles",
     "name": "Часы 12 апостолов",
     "category": "walk",
-    "description": "Динамическая скульптурная композиция: каждые 3 часа фигуры Христа и апостолов совершают шествие [[78]]",
-    "tags": ["прогулка", "фото", "шоу", "архитектура", "интерактив"],
+    "description": "Динамическая скульптурная композиция: каждые 3 часа фигуры Христа и апостолов совершают шествие",
+    "tags": [
+      "прогулка",
+      "фото",
+      "шоу",
+      "архитектура",
+      "интерактив"
+    ],
     "indoor": false,
     "duration_min": 40,
     "budget": "low",
-    "audiences": ["solo", "couple", "family", "friends", "seniors"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends",
+      "seniors"
+    ],
     "activity_level": "low",
     "food_tags": [],
     "photo_score": 5,
     "local_score": 5,
-    "coords": [56.637, 47.906],
-    "weather_ok": ["sun", "cloud"],
+    "coords": [
+      56.637,
+      47.906
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
     "ministry_boost": 5,
-    "promo_label": "Шоу каждые 3 часа"
+    "promo_label": "Шоу каждые 3 часа",
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "park_culture",
     "name": "Парк культуры",
-    "category": "walk",
+    "category": "park",
     "description": "Центральный парк отдыха с аллеями, аттракционами и скульптурными композициями",
-    "tags": ["прогулка", "парк", "отдых", "семья", "природа"],
+    "tags": [
+      "прогулка",
+      "парк",
+      "отдых",
+      "семья",
+      "природа"
+    ],
     "indoor": false,
     "duration_min": 120,
     "budget": "low",
-    "audiences": ["solo", "couple", "family", "friends", "seniors"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends",
+      "seniors"
+    ],
     "activity_level": "medium",
     "food_tags": [],
     "photo_score": 4,
     "local_score": 4,
-    "coords": [56.636, 47.891],
-    "weather_ok": ["sun", "cloud"],
+    "coords": [
+      56.636,
+      47.891
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
     "ministry_boost": 2,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "patriarshaya_square",
     "name": "Патриаршая Площадь",
     "category": "walk",
-    "description": "Центральная площадь с памятником Патриарху Алексию Второму, часами 12 апостолов и архитектурой в стиле фламандского ренессанса [[69]]",
-    "tags": ["прогулка", "фото", "центр", "архитектура", "история"],
+    "description": "Центральная площадь с памятником Патриарху Алексию Второму и часами 12 апостолов",
+    "tags": [
+      "прогулка",
+      "фото",
+      "центр",
+      "архитектура",
+      "история"
+    ],
     "indoor": false,
     "duration_min": 70,
     "budget": "low",
-    "audiences": ["solo", "couple", "family", "friends", "seniors"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends",
+      "seniors"
+    ],
     "activity_level": "low",
     "food_tags": [],
     "photo_score": 5,
     "local_score": 5,
-    "coords": [56.637, 47.907],
-    "weather_ok": ["sun", "cloud"],
+    "coords": [
+      56.637,
+      47.907
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
     "ministry_boost": 5,
-    "promo_label": "Сердце города"
+    "promo_label": "Сердце города",
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "tree_love_wishes",
     "name": "Дерево Любви и Желаний",
     "category": "photo",
-    "description": "Романтическая скульптура для фото и исполнения желаний на Патриаршей площади [[89]]",
-    "tags": ["фото", "романтика", "скульптура", "желания"],
+    "description": "Романтическая скульптура для фото и исполнения желаний на Патриаршей площади",
+    "tags": [
+      "фото",
+      "романтика",
+      "скульптура",
+      "желания"
+    ],
     "indoor": false,
     "duration_min": 20,
     "budget": "low",
-    "audiences": ["couple", "solo", "friends"],
+    "audiences": [
+      "couple",
+      "solo",
+      "friends"
+    ],
     "activity_level": "low",
     "food_tags": [],
     "photo_score": 5,
     "local_score": 4,
-    "coords": [56.637, 47.901],
-    "weather_ok": ["sun", "cloud"],
+    "coords": [
+      56.637,
+      47.901
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
     "ministry_boost": 2,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "square_republic_mary",
-    "name": "Площадь Республики и Пресвятой Девы Марии",
+    "name": "Площадь Республики Марии",
     "category": "walk",
-    "description": "Площадь с Благовещенским собором и копией Спасской башни, стилизованная под московский Кремль [[39]]",
-    "tags": ["прогулка", "фото", "архитектура", "храм", "история"],
+    "description": "Площадь с Благовещенским собором и копией Спасской башни, стилизованная под московский Кремль",
+    "tags": [
+      "прогулка",
+      "фото",
+      "архитектура",
+      "храм",
+      "история"
+    ],
     "indoor": false,
     "duration_min": 30,
     "budget": "low",
-    "audiences": ["solo", "couple", "family", "seniors"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "seniors"
+    ],
     "activity_level": "low",
     "food_tags": [],
     "photo_score": 5,
     "local_score": 5,
-    "coords": [56.640, 47.910],
-    "weather_ok": ["sun", "cloud"],
+    "coords": [
+      56.64,
+      47.91
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
     "ministry_boost": 4,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "zero_kilometer",
     "name": "0 километр",
     "category": "photo",
-    "description": "Знаковая отметка нулевого километра автодорог Марий Эл — популярное место для фото на память",
-    "tags": ["фото", "символ", "центр", "памятник"],
+    "description": "Знаковая отметка нулевого километра автодорог Марий Эл — популярное место для фото",
+    "tags": [
+      "фото",
+      "символ",
+      "центр",
+      "памятник"
+    ],
     "indoor": false,
     "duration_min": 15,
     "budget": "low",
-    "audiences": ["solo", "couple", "family", "friends"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "friends"
+    ],
     "activity_level": "low",
     "food_tags": [],
     "photo_score": 3,
     "local_score": 4,
-    "coords": [56.635, 47.900],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.635,
+      47.9
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 2,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "tree_of_life",
     "name": "Древо жизни",
     "category": "photo",
-    "description": "Скульптурная композиция в Центральном парке с символическим изображением дерева [[87]]",
-    "tags": ["фото", "скульптура", "парк", "символ"],
+    "description": "Скульптурная композиция в Центральном парке с символическим изображением дерева",
+    "tags": [
+      "фото",
+      "скульптура",
+      "парк",
+      "символ"
+    ],
     "indoor": false,
     "duration_min": 15,
     "budget": "low",
-    "audiences": ["solo", "couple", "family"],
+    "audiences": [
+      "solo",
+      "couple",
+      "family"
+    ],
     "activity_level": "low",
     "food_tags": [],
     "photo_score": 4,
     "local_score": 4,
-    "coords": [56.636, 47.891],
-    "weather_ok": ["sun", "cloud"],
+    "coords": [
+      56.636,
+      47.891
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
     "ministry_boost": 2,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
   },
   {
     "id": "mother_and_child",
     "name": "Мать и дитя",
     "category": "photo",
-    "description": "Трогательная скульптурная композиция, посвящённая материнству, популярное место для семейных фото",
-    "tags": ["фото", "скульптура", "семья", "памятник"],
+    "description": "Трогательная скульптурная композиция, посвящённая материнству",
+    "tags": [
+      "фото",
+      "скульптура",
+      "семья",
+      "памятник"
+    ],
     "indoor": false,
     "duration_min": 15,
     "budget": "low",
-    "audiences": ["family", "couple", "solo"],
+    "audiences": [
+      "family",
+      "couple",
+      "solo"
+    ],
     "activity_level": "low",
     "food_tags": [],
     "photo_score": 4,
     "local_score": 4,
-    "coords": [56.634, 47.903],
-    "weather_ok": ["sun", "cloud", "rain"],
+    "coords": [
+      56.634,
+      47.903
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "ministry_boost": 2,
-    "promo_label": null
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "theater_drama",
+    "name": "Русский театр драмы",
+    "category": "theater",
+    "description": "Старейший театр республики с классическими и современными постановками",
+    "tags": [
+      "театр",
+      "indoor",
+      "культура",
+      "искусство",
+      "вечер"
+    ],
+    "indoor": true,
+    "duration_min": 150,
+    "budget": "medium",
+    "audiences": [
+      "couple",
+      "seniors",
+      "friends"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 4,
+    "local_score": 5,
+    "coords": [
+      56.631,
+      47.897
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 3,
+    "promo_label": "Скидка 15% на утренние показы",
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "church_assumption",
+    "name": "Успенская церковь",
+    "category": "church",
+    "description": "Действующий православный храм XIX века с красивой архитектурой",
+    "tags": [
+      "церковь",
+      "indoor",
+      "история",
+      "архитектура",
+      "религия"
+    ],
+    "indoor": true,
+    "duration_min": 30,
+    "budget": "low",
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "seniors"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 5,
+    "local_score": 5,
+    "coords": [
+      56.629,
+      47.89
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 2,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "boulevard_chain",
+    "name": "Бульвар Чавайна",
+    "category": "walk",
+    "description": "Пешеходный бульвар с памятниками марийским писателям и зелёными зонами",
+    "tags": [
+      "прогулка",
+      "парк",
+      "культура",
+      "фото"
+    ],
+    "indoor": false,
+    "duration_min": 45,
+    "budget": "low",
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "seniors"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 4,
+    "local_score": 4,
+    "coords": [
+      56.636,
+      47.903
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
+    "ministry_boost": 2,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "museum_ethno",
+    "name": "Этнографический музей",
+    "category": "museum",
+    "description": "Музей под открытым небом с традиционными марийскими постройками",
+    "tags": [
+      "музеи",
+      "история",
+      "культура",
+      "этнология",
+      "indoor"
+    ],
+    "indoor": true,
+    "duration_min": 70,
+    "budget": "medium",
+    "audiences": [
+      "family",
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "activity_level": "medium",
+    "food_tags": [],
+    "photo_score": 5,
+    "local_score": 5,
+    "coords": [
+      56.625,
+      47.888
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 3,
+    "promo_label": "Групповая скидка 25%",
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "square_victory",
+    "name": "Площадь Победы",
+    "category": "walk",
+    "description": "Мемориальный комплекс с вечным огнём и памятником воинам",
+    "tags": [
+      "прогулка",
+      "история",
+      "мемориал",
+      "фото"
+    ],
+    "indoor": false,
+    "duration_min": 30,
+    "budget": "low",
+    "audiences": [
+      "solo",
+      "couple",
+      "family",
+      "seniors"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 4,
+    "local_score": 5,
+    "coords": [
+      56.628,
+      47.894
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 3,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "cafe_amber",
+    "name": "Кафе \"Янтарь\"",
+    "category": "cafe",
+    "description": "Семейное кафе с домашней кухней и детской комнатой",
+    "tags": [
+      "еда",
+      "indoor",
+      "кафе",
+      "семейное"
+    ],
+    "indoor": true,
+    "duration_min": 50,
+    "budget": "low",
+    "audiences": [
+      "family",
+      "couple",
+      "friends"
+    ],
+    "activity_level": "low",
+    "food_tags": [
+      "обед",
+      "завтрак",
+      "детское меню"
+    ],
+    "photo_score": 3,
+    "local_score": 4,
+    "coords": [
+      56.637,
+      47.901
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 1,
+    "promo_label": "Детям до 7 лет — бесплатно",
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "gorky_park",
+    "name": "Парк Горького",
+    "category": "park",
+    "description": "Исторический парк с прудом, аллеями и зонами для пикника",
+    "tags": [
+      "парк",
+      "прогулка",
+      "отдых",
+      "природа"
+    ],
+    "indoor": false,
+    "duration_min": 60,
+    "budget": "low",
+    "audiences": [
+      "family",
+      "friends",
+      "couple",
+      "solo"
+    ],
+    "activity_level": "medium",
+    "food_tags": [],
+    "photo_score": 4,
+    "local_score": 4,
+    "coords": [
+      56.641,
+      47.91
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
+    "ministry_boost": 1,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "museum_galleries",
+    "name": "Национальная галерея",
+    "category": "museum",
+    "description": "Крупнейшее собрание изобразительного искусства республики",
+    "tags": [
+      "музеи",
+      "искусство",
+      "indoor",
+      "культура"
+    ],
+    "indoor": true,
+    "duration_min": 80,
+    "budget": "medium",
+    "audiences": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 5,
+    "local_score": 5,
+    "coords": [
+      56.632,
+      47.896
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 3,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "bridge_time",
+    "name": "Мост Времени",
+    "category": "walk",
+    "description": "Современный пешеходный мост с панорамным видом на набережную",
+    "tags": [
+      "прогулка",
+      "фото",
+      "современное",
+      "архитектура"
+    ],
+    "indoor": false,
+    "duration_min": 20,
+    "budget": "low",
+    "audiences": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 5,
+    "local_score": 4,
+    "coords": [
+      56.639,
+      47.906
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
+    "ministry_boost": 2,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "zoo_contact",
+    "name": "Контактный зоопарк",
+    "category": "entertainment",
+    "description": "Небольшой зоопарк где можно покормить животных",
+    "tags": [
+      "животные",
+      "indoor",
+      "семейное",
+      "дети"
+    ],
+    "indoor": true,
+    "duration_min": 60,
+    "budget": "medium",
+    "audiences": [
+      "family",
+      "friends"
+    ],
+    "activity_level": "medium",
+    "food_tags": [],
+    "photo_score": 4,
+    "local_score": 4,
+    "coords": [
+      56.634,
+      47.898
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 1,
+    "promo_label": "Кормление животных включено",
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "bar_loft",
+    "name": "Бар «Лофт»",
+    "category": "bar",
+    "description": "Стильный бар с крафтовым пивом и закусками",
+    "tags": [
+      "еда",
+      "indoor",
+      "бар",
+      "вечер",
+      "алкоголь"
+    ],
+    "indoor": true,
+    "duration_min": 90,
+    "budget": "medium",
+    "audiences": [
+      "friends",
+      "couple"
+    ],
+    "activity_level": "low",
+    "food_tags": [
+      "ужин",
+      "закуски",
+      "пиво"
+    ],
+    "photo_score": 4,
+    "local_score": 4,
+    "coords": [
+      56.635,
+      47.899
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 0,
+    "promo_label": "Счастливые часы 17:00-19:00",
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "climbing_wall",
+    "name": "Скалодром «Вертикаль»",
+    "category": "sport",
+    "description": "Крытый скалодром с трассами разной сложности",
+    "tags": [
+      "спорт",
+      "indoor",
+      "активность",
+      "экстрим"
+    ],
+    "indoor": true,
+    "duration_min": 90,
+    "budget": "medium",
+    "audiences": [
+      "friends",
+      "solo",
+      "family"
+    ],
+    "activity_level": "high",
+    "food_tags": [],
+    "photo_score": 3,
+    "local_score": 4,
+    "coords": [
+      56.645,
+      47.915
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 1,
+    "promo_label": "Первое посещение — скидка 50%",
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "quest_room",
+    "name": "Квест-комната «Тайна»",
+    "category": "entertainment",
+    "description": "Интерактивный квест с погружением в атмосферу приключения",
+    "tags": [
+      "indoor",
+      "развлечения",
+      "команда",
+      "квест"
+    ],
+    "indoor": true,
+    "duration_min": 60,
+    "budget": "medium",
+    "audiences": [
+      "friends",
+      "family",
+      "couple"
+    ],
+    "activity_level": "high",
+    "food_tags": [],
+    "photo_score": 3,
+    "local_score": 4,
+    "coords": [
+      56.636,
+      47.9
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 0,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "ice_arena",
+    "name": "Ледовая арена",
+    "category": "sport",
+    "description": "Каток с прокатом коньков и зоной для зрителей",
+    "tags": [
+      "спорт",
+      "indoor",
+      "зима",
+      "активность"
+    ],
+    "indoor": true,
+    "duration_min": 90,
+    "budget": "low",
+    "audiences": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "activity_level": "high",
+    "food_tags": [],
+    "photo_score": 4,
+    "local_score": 5,
+    "coords": [
+      56.65,
+      47.92
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 2,
+    "promo_label": "Утренние сеансы дешевле",
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "cinema_planeta",
+    "name": "Кинотеатр «Планета»",
+    "category": "cinema",
+    "description": "Современный кинотеатр с 3D и комфортными залами",
+    "tags": [
+      "indoor",
+      "кино",
+      "развлечения",
+      "вечер"
+    ],
+    "indoor": true,
+    "duration_min": 150,
+    "budget": "medium",
+    "audiences": [
+      "family",
+      "couple",
+      "friends"
+    ],
+    "activity_level": "low",
+    "food_tags": [
+      "попкорн",
+      "напитки"
+    ],
+    "photo_score": 2,
+    "local_score": 4,
+    "coords": [
+      56.638,
+      47.904
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 1,
+    "promo_label": "Скидка студентам 20%",
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "bowling_club",
+    "name": "Боулинг-клуб",
+    "category": "entertainment",
+    "description": "Боулинг на 12 дорожек с баром и зоной отдыха",
+    "tags": [
+      "indoor",
+      "развлечения",
+      "спорт",
+      "команда"
+    ],
+    "indoor": true,
+    "duration_min": 90,
+    "budget": "medium",
+    "audiences": [
+      "friends",
+      "family"
+    ],
+    "activity_level": "medium",
+    "food_tags": [
+      "закуски",
+      "напитки"
+    ],
+    "photo_score": 3,
+    "local_score": 4,
+    "coords": [
+      56.642,
+      47.912
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 0,
+    "promo_label": null,
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "spa_wellness",
+    "name": "SPA-комплекс «Релакс»",
+    "category": "spa",
+    "description": "Банный комплекс с бассейном и массажными кабинетами",
+    "tags": [
+      "indoor",
+      "релакс",
+      "здоровье",
+      "spa"
+    ],
+    "indoor": true,
+    "duration_min": 120,
+    "budget": "high",
+    "audiences": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "activity_level": "low",
+    "food_tags": [],
+    "photo_score": 4,
+    "local_score": 4,
+    "coords": [
+      56.644,
+      47.918
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "ministry_boost": 0,
+    "promo_label": "Вечерний тариф после 20:00",
+    "address": "г. Йошкар-Ола"
+  },
+  {
+    "id": "rope_park",
+    "name": "Верёвочный парк",
+    "category": "entertainment",
+    "description": "Приключенческий парк с трассами разной сложности на деревьях",
+    "tags": [
+      "активность",
+      "экстрим",
+      "природа",
+      "семья"
+    ],
+    "indoor": false,
+    "duration_min": 90,
+    "budget": "medium",
+    "audiences": [
+      "family",
+      "friends"
+    ],
+    "activity_level": "high",
+    "food_tags": [],
+    "photo_score": 4,
+    "local_score": 4,
+    "coords": [
+      56.648,
+      47.925
+    ],
+    "weather_ok": [
+      "sun",
+      "cloud"
+    ],
+    "ministry_boost": 1,
+    "promo_label": "Семейный билет выгоднее",
+    "address": "г. Йошкар-Ола"
   }
 ]
