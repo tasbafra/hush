@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Онбординг — карточки интересов</title>
+<style>
+  :root{
+    --bg:#f4f1fa;
+    --card:#ffffff;
+    --text:#4a2b74;
+    --muted:#8b7aa7;
+    --accent1:#7a4cf7;
+    --accent2:#b266ff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,-apple-system,sans-serif;
+    background:radial-gradient(circle at 20% 10%,rgba(140,76,246,.12),transparent 30%),
+               radial-gradient(circle at 80% 90%,rgba(255,200,100,.15),transparent 35%),
+               var(--bg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+  }
+  .app{
+    width:min(900px,92vw);
+    text-align:center;
+  }
+  .stack{
+    position:relative;
+    height:440px;
+  }
+  .card{
+    position:absolute;
+    inset:0;
+    padding:48px;
+    border-radius:32px;
+    background:linear-gradient(180deg,#fff,#f7f3ff);
+    box-shadow:0 20px 40px rgba(97,64,158,.15);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    transition:transform .35s ease, opacity .35s ease;
+    touch-action:pan-y;
+  }
+  .card.hidden{
+    opacity:0;
+    pointer-events:none;
+    transform:scale(.95);
+  }
+  .icon{margin-bottom:16px}
+  .title{
+    font-size:46px;
+    font-weight:800;
+    color:var(--text);
+    margin-bottom:8px;
+  }
+  .subtitle{
+    font-size:20px;
+    color:var(--muted);
+    margin-bottom:32px;
+  }
+  .buttons{
+    display:flex;
+    gap:20px;
+  }
+  .btn{
+    border:none;
+    border-radius:999px;
+    font-size:22px;
+    font-weight:700;
+    padding:14px 32px;
+    cursor:pointer;
+    transition:.2s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .skip{background:#eee;color:#555}
+  .like{
+    background:linear-gradient(135deg,var(--accent1),var(--accent2));
+    color:#fff;
+    box-shadow:0 10px 20px rgba(122,76,247,.35);
+  }
+  .progress{
+    margin-top:18px;
+    color:#7a6a9a;
+    font-weight:600;
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+<div class="stack" id="stack">
+
+<div class="card">
+<div class="icon">🏰</div>
+<div class="title">История и легенды</div>
+<div class="subtitle">старые улицы, музеи, городские истории</div>
+<div class="buttons">
+<button class="btn skip">Скип</button>
+<button class="btn like">Нравится</button>
+</div>
+</div>
+
+<div class="card hidden">
+<div class="icon">📸</div>
+<div class="title">Красивые фото</div>
+<div class="subtitle">архитектура, набережная, лучшие фототочки</div>
+<div class="buttons">
+<button class="btn skip">Скип</button>
+<button class="btn like">Нравится</button>
+</div>
+</div>
+
+<div class="card hidden">
+<div class="icon">🍲</div>
+<div class="title">Марийская кухня</div>
+<div class="subtitle">национальные блюда и локальные рестораны</div>
+<div class="buttons">
+<button class="btn skip">Скип</button>
+<button class="btn like">Нравится</button>
+</div>
+</div>
+
+<div class="card hidden">
+<div class="icon">☕</div>
+<div class="title">Кофе и паузы</div>
+<div class="subtitle">уютные кофейни и спокойные остановки</div>
+<div class="buttons">
+<button class="btn skip">Скип</button>
+<button class="btn like">Нравится</button>
+</div>
+</div>
+
+<div class="card hidden">
+<div class="icon">🚶</div>
+<div class="title">Долгие прогулки</div>
+<div class="subtitle">пешие маршруты и набережные</div>
+<div class="buttons">
+<button class="btn skip">Скип</button>
+<button class="btn like">Нравится</button>
+</div>
+</div>
+
+<div class="card hidden">
+<div class="icon">🖼</div>
+<div class="title">Музеи и выставки</div>
+<div class="subtitle">галереи, экспозиции, культура</div>
+<div class="buttons">
+<button class="btn skip">Скип</button>
+<button class="btn like">Нравится</button>
+</div>
+</div>
+
+<div class="card hidden">
+<div class="icon">🧘</div>
+<div class="title">Спокойный темп</div>
+<div class="subtitle">без спешки, больше отдыха</div>
+<div class="buttons">
+<button class="btn skip">Скип</button>
+<button class="btn like">Нравится</button>
+</div>
+</div>
+
+<div class="card hidden">
+<div class="icon">⚡</div>
+<div class="title">Активный день</div>
+<div class="subtitle">насыщенный маршрут и много локаций</div>
+<div class="buttons">
+<button class="btn skip">Скип</button>
+<button class="btn like">Нравится</button>
+</div>
+</div>
+
+</div>
+
+<div class="progress" id="progress">1 / 8</div>
+
+</div>
+
+<script>
+const cards=[...document.querySelectorAll(".card")]
+const progress=document.getElementById("progress")
+let index=0
+
+function showNext(){
+  if(index>=cards.length) return
+  cards[index].classList.add("hidden")
+  index++
+  if(index<cards.length) cards[index].classList.remove("hidden")
+  progress.textContent=`${Math.min(index+1,cards.length)} / ${cards.length}`
+}
+
+document.querySelectorAll(".skip").forEach(b=>b.onclick=showNext)
+document.querySelectorAll(".like").forEach(b=>b.onclick=showNext)
+
+let startX=null
+const stack=document.getElementById("stack")
+
+stack.addEventListener("pointerdown",e=>startX=e.clientX)
+
+stack.addEventListener("pointerup",e=>{
+  if(startX===null) return
+  const diff=e.clientX-startX
+  if(Math.abs(diff)>80) showNext()
+  startX=null
+})
+</script>
+
+</body>
+</html>
