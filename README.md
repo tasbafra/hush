@@ -1,4 +1,4 @@
-<img width="1280" height="640" alt="Social preview" src="
+<img width="1280" height="640" alt="Social preview" src="https://github.com/tasbafra/hush/blob/main/Preview"
 # Al agent для формирования туристических потоков в Йошкар-Оле ```"Йо - Йошка"```
 Веб-приложение для создания туристических маршрутов по городу Йошкар-Ола
 ## Демонстрация работы
